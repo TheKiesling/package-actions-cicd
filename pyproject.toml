@@ -3,17 +3,17 @@ requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "diabetes-model-dl"
-version = "0.1.5" # Replace with your current version
-description = "A short description of your project."
+name = "diabetes-model-dl" # Must match your package name
+version = "0.1.5" # Your current package version
+description = "A brief description of your project."
 authors = [
-    { name = "Your Name", email = "your.email@example.com" }
+  { name = "Diego Lemus", email = "your.email@example.com" }
 ]
 readme = "README.md"
-license = { file = "LICENSE" }
-requires-python = ">=3.9" # Set to the minimum Python version required by your package
+requires-python = ">=3.9" # Minimum Python version required
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+license = { file = "LICENSE" } # This is the crucial line for your error
