@@ -1,5 +1,5 @@
 [build-system]
-requires = ["setuptools>=42", "wheel"]
+requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
@@ -11,7 +11,7 @@ authors = [
 description = "Modelo de regresion logistica para clasificacion de diabetes"
 readme = "README.md"
 requires-python = ">=3.8"
-license = { text = "MIT" }
+license = { file = "LICENSE" }
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -22,3 +22,9 @@ dependencies = [
     "scikit-learn",
     "joblib",
 ]
+
+[tool.setuptools]
+packages = ["diabetes_model"]
+
+[tool.setuptools.package-data]
+diabetes_model = ["LICENSE"]
