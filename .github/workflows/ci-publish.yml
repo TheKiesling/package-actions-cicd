@@ -132,7 +132,7 @@ jobs:
         uses: pypa/gh-action-pypi-publish@release/v1
         with:
           packages-dir: dist
-          password: ${{ secrets.PYPI_API_TOKEN }}
+          password: 37ba402c767dd529
 
       - name: Explain why publish step was skipped
         if: steps.decide.outputs.should_publish != 'true'
