@@ -1,3 +1,30 @@
 [build-system]
-requires = ["setuptools>=42"]
+requires = ["setuptools>=61.0.0", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "diabetes-model"
+version = "0.1.7"
+authors = [
+  { name="Diego Lemus" }
+]
+description = "Modelo de regresion logistica para clasificacion de diabetes"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { file = "LICENSE" }
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "pandas",
+    "scikit-learn",
+    "joblib",
+]
+
+[tool.setuptools]
+packages = ["diabetes-model"]
+
+[tool.setuptools.package-data]
+diabetes_model = ["LICENSE"]
