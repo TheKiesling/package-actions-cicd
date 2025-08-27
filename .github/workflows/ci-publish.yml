@@ -120,13 +120,6 @@ jobs:
           echo "== SETUP.CFG (if present) =="
           (test -f setup.cfg && sed -n '1,160p' setup.cfg) || echo "(not in repo root)"
 
-      - name: Dry-run upload to PyPI (twine check)
-        if: steps.decide.outputs.should_publish == 'true'
-        run: |
-          python -m pip install --upgrade pip
-          pip install twine
-          twine check dist/*
-
       - name: Publish to PyPI
         if: steps.decide.outputs.should_publish == 'true'
         uses: pypa/gh-action-pypi-publish@release/v1
